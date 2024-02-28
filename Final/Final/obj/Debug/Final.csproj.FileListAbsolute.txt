@@ -1,0 +1,14 @@
+D:\Facultad\Programacion\Final2Cuatrimestre\Final\Final\bin\Debug\Final.exe.config
+D:\Facultad\Programacion\Final2Cuatrimestre\Final\Final\bin\Debug\Final.exe
+D:\Facultad\Programacion\Final2Cuatrimestre\Final\Final\bin\Debug\Final.pdb
+D:\Facultad\Programacion\Final2Cuatrimestre\Final\Final\obj\Debug\Final.csproj.AssemblyReference.cache
+D:\Facultad\Programacion\Final2Cuatrimestre\Final\Final\obj\Debug\Final.Form1.resources
+D:\Facultad\Programacion\Final2Cuatrimestre\Final\Final\obj\Debug\Final.Properties.Resources.resources
+D:\Facultad\Programacion\Final2Cuatrimestre\Final\Final\obj\Debug\Final.csproj.GenerateResource.cache
+D:\Facultad\Programacion\Final2Cuatrimestre\Final\Final\obj\Debug\Final.csproj.CoreCompileInputs.cache
+D:\Facultad\Programacion\Final2Cuatrimestre\Final\Final\obj\Debug\Final.exe
+D:\Facultad\Programacion\Final2Cuatrimestre\Final\Final\obj\Debug\Final.pdb
+D:\Facultad\Programacion\Final2Cuatrimestre\Final\Final\obj\Debug\Final.Form2.resources
+D:\Facultad\Programacion\Final2Cuatrimestre\Final\Final\obj\Debug\Final.Form3.resources
+D:\Facultad\Programacion\Final2Cuatrimestre\Final\Final\obj\Debug\Final.Form4.resources
+D:\Facultad\Programacion\Final2Cuatrimestre\Final\Final\obj\Debug\Final.Form5.resources
