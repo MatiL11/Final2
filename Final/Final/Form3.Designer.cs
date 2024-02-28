@@ -32,15 +32,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtModelo = new System.Windows.Forms.TextBox();
+            this.txtNroConcesionaria = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.dgvPedidos = new System.Windows.Forms.DataGridView();
             this.btnAlta = new System.Windows.Forms.Button();
             this.btnBaja = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnListado = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnCargarArchivo = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVolver
@@ -81,36 +82,36 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Cantidad";
             // 
-            // textBox1
+            // txtModelo
             // 
-            this.textBox1.Location = new System.Drawing.Point(97, 132);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(230, 38);
-            this.textBox1.TabIndex = 4;
+            this.txtModelo.Location = new System.Drawing.Point(97, 132);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(230, 38);
+            this.txtModelo.TabIndex = 4;
             // 
-            // textBox2
+            // txtNroConcesionaria
             // 
-            this.textBox2.Location = new System.Drawing.Point(97, 309);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(230, 38);
-            this.textBox2.TabIndex = 5;
+            this.txtNroConcesionaria.Location = new System.Drawing.Point(97, 309);
+            this.txtNroConcesionaria.Name = "txtNroConcesionaria";
+            this.txtNroConcesionaria.Size = new System.Drawing.Size(230, 38);
+            this.txtNroConcesionaria.TabIndex = 5;
             // 
-            // textBox3
+            // txtCantidad
             // 
-            this.textBox3.Location = new System.Drawing.Point(93, 477);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(234, 38);
-            this.textBox3.TabIndex = 6;
+            this.txtCantidad.Location = new System.Drawing.Point(93, 477);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(234, 38);
+            this.txtCantidad.TabIndex = 6;
             // 
-            // dataGridView1
+            // dgvPedidos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(708, 132);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 102;
-            this.dataGridView1.RowTemplate.Height = 40;
-            this.dataGridView1.Size = new System.Drawing.Size(1026, 383);
-            this.dataGridView1.TabIndex = 7;
+            this.dgvPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPedidos.Location = new System.Drawing.Point(708, 132);
+            this.dgvPedidos.Name = "dgvPedidos";
+            this.dgvPedidos.RowHeadersWidth = 102;
+            this.dgvPedidos.RowTemplate.Height = 40;
+            this.dgvPedidos.Size = new System.Drawing.Size(1155, 383);
+            this.dgvPedidos.TabIndex = 7;
             // 
             // btnAlta
             // 
@@ -129,6 +130,7 @@
             this.btnBaja.TabIndex = 9;
             this.btnBaja.Text = "Baja";
             this.btnBaja.UseVisualStyleBackColor = true;
+            this.btnBaja.Click += new System.EventHandler(this.btnBaja_Click);
             // 
             // btnModificar
             // 
@@ -138,6 +140,7 @@
             this.btnModificar.TabIndex = 10;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnListado
             // 
@@ -148,19 +151,32 @@
             this.btnListado.Text = "Listado";
             this.btnListado.UseVisualStyleBackColor = true;
             // 
+            // btnCargarArchivo
+            // 
+            this.btnCargarArchivo.Location = new System.Drawing.Point(708, 675);
+            this.btnCargarArchivo.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.btnCargarArchivo.Name = "btnCargarArchivo";
+            this.btnCargarArchivo.Size = new System.Drawing.Size(301, 103);
+            this.btnCargarArchivo.TabIndex = 12;
+            this.btnCargarArchivo.Text = "Cargar Archivo";
+            this.btnCargarArchivo.UseVisualStyleBackColor = true;
+            this.btnCargarArchivo.Click += new System.EventHandler(this.btnCargarArchivo_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(2133, 1073);
+            this.Controls.Add(this.btnCargarArchivo);
             this.Controls.Add(this.btnListado);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnBaja);
             this.Controls.Add(this.btnAlta);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dgvPedidos);
+            this.Controls.Add(this.txtCantidad);
+            this.Controls.Add(this.txtNroConcesionaria);
+            this.Controls.Add(this.txtModelo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -168,7 +184,7 @@
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "Form3";
             this.Text = "Pedidos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,13 +196,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtModelo;
+        private System.Windows.Forms.TextBox txtNroConcesionaria;
+        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.DataGridView dgvPedidos;
         private System.Windows.Forms.Button btnAlta;
         private System.Windows.Forms.Button btnBaja;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnListado;
+        private System.Windows.Forms.Button btnCargarArchivo;
     }
 }
