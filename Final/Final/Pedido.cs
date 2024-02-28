@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Final
 {
@@ -17,6 +19,26 @@ namespace Final
         public string pedidoListo(int modelo, int nroConcecionaria, int cantidad)
         {
             return "Modelo: " + modelo + "|" + "Concesionaria: " + nroConcesionaria + "|" + "Cantidad: " + cantidad;
+        }
+    }
+
+    class ComparadorElemento : IComparer
+    {
+        //metodo para comparar los pedidos
+        public int Compare(object x, object y)
+        {
+            Pedido pedidoX = (Pedido)x;
+            Pedido pedidoY = (Pedido)y;
+
+            // Primero, comparamos por número de modelo
+            int comparacionModelo = pedidoX.modelo.CompareTo(pedidoY.modelo);
+            if (comparacionModelo != 0)
+            {
+                return comparacionModelo;
+            }
+
+            // Si los números de modelo son iguales, comparamos por número de concesionaria
+            return pedidoX.nroConcesionaria.CompareTo(pedidoY.nroConcesionaria);
         }
     }
 }

@@ -81,13 +81,15 @@ namespace Final
                     var pedidosOrdenados = pedidos.Cast<Pedido>().OrderBy(p => p.modelo).ThenBy(p => p.nroConcesionaria).ToList();
                     pedidos.Add(nuevoPedido);
 
-
+                    //ordenar el arraylist
+                    pedidos.Sort(new ComparadorElemento());
 
                     //agregar el pedido al data grid view
                     dgvPedidoExitoso.DataSource = null;
                     dgvPedidoExitoso.DataSource = pedidos;
                     LimpiarTextBox();
                     MessageBox.Show("Pedido enviado");
+
                 }
             }
         }
@@ -106,6 +108,8 @@ namespace Final
                 agregar.WriteLine(pedido.modelo + "|" + pedido.nroConcesionaria + "|" + pedido.cantidad);
                 agregar.Close();
             }
+
+            MessageBox.Show("Archivo guardado");
         }
 
         //metodo para limpiar el archivo de texto

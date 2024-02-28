@@ -12,3 +12,17 @@ D:\Facultad\Programacion\Final2Cuatrimestre\Final\Final\obj\Debug\Final.Form2.re
 D:\Facultad\Programacion\Final2Cuatrimestre\Final\Final\obj\Debug\Final.Form3.resources
 D:\Facultad\Programacion\Final2Cuatrimestre\Final\Final\obj\Debug\Final.Form4.resources
 D:\Facultad\Programacion\Final2Cuatrimestre\Final\Final\obj\Debug\Final.Form5.resources
+C:\Users\matia\Desktop\Final\Final2\Final\Final\bin\Debug\Final.exe.config
+C:\Users\matia\Desktop\Final\Final2\Final\Final\bin\Debug\Final.exe
+C:\Users\matia\Desktop\Final\Final2\Final\Final\bin\Debug\Final.pdb
+C:\Users\matia\Desktop\Final\Final2\Final\Final\obj\Debug\Final.csproj.AssemblyReference.cache
+C:\Users\matia\Desktop\Final\Final2\Final\Final\obj\Debug\Final.Form1.resources
+C:\Users\matia\Desktop\Final\Final2\Final\Final\obj\Debug\Final.Form2.resources
+C:\Users\matia\Desktop\Final\Final2\Final\Final\obj\Debug\Final.Form3.resources
+C:\Users\matia\Desktop\Final\Final2\Final\Final\obj\Debug\Final.Form4.resources
+C:\Users\matia\Desktop\Final\Final2\Final\Final\obj\Debug\Final.Form5.resources
+C:\Users\matia\Desktop\Final\Final2\Final\Final\obj\Debug\Final.Properties.Resources.resources
+C:\Users\matia\Desktop\Final\Final2\Final\Final\obj\Debug\Final.csproj.GenerateResource.cache
+C:\Users\matia\Desktop\Final\Final2\Final\Final\obj\Debug\Final.csproj.CoreCompileInputs.cache
+C:\Users\matia\Desktop\Final\Final2\Final\Final\obj\Debug\Final.exe
+C:\Users\matia\Desktop\Final\Final2\Final\Final\obj\Debug\Final.pdb
