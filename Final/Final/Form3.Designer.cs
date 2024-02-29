@@ -36,10 +36,8 @@
             this.txtNroConcesionaria = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
-            this.btnAlta = new System.Windows.Forms.Button();
             this.btnBaja = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.btnListado = new System.Windows.Forms.Button();
             this.btnCargarArchivo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.SuspendLayout();
@@ -113,18 +111,9 @@
             this.dgvPedidos.Size = new System.Drawing.Size(1155, 383);
             this.dgvPedidos.TabIndex = 7;
             // 
-            // btnAlta
-            // 
-            this.btnAlta.Location = new System.Drawing.Point(708, 568);
-            this.btnAlta.Name = "btnAlta";
-            this.btnAlta.Size = new System.Drawing.Size(135, 56);
-            this.btnAlta.TabIndex = 8;
-            this.btnAlta.Text = "Alta";
-            this.btnAlta.UseVisualStyleBackColor = true;
-            // 
             // btnBaja
             // 
-            this.btnBaja.Location = new System.Drawing.Point(849, 568);
+            this.btnBaja.Location = new System.Drawing.Point(708, 568);
             this.btnBaja.Name = "btnBaja";
             this.btnBaja.Size = new System.Drawing.Size(135, 56);
             this.btnBaja.TabIndex = 9;
@@ -134,22 +123,13 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(990, 568);
+            this.btnModificar.Location = new System.Drawing.Point(852, 568);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(157, 56);
             this.btnModificar.TabIndex = 10;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnListado
-            // 
-            this.btnListado.Location = new System.Drawing.Point(1153, 568);
-            this.btnListado.Name = "btnListado";
-            this.btnListado.Size = new System.Drawing.Size(135, 56);
-            this.btnListado.TabIndex = 11;
-            this.btnListado.Text = "Listado";
-            this.btnListado.UseVisualStyleBackColor = true;
             // 
             // btnCargarArchivo
             // 
@@ -158,7 +138,7 @@
             this.btnCargarArchivo.Name = "btnCargarArchivo";
             this.btnCargarArchivo.Size = new System.Drawing.Size(301, 103);
             this.btnCargarArchivo.TabIndex = 12;
-            this.btnCargarArchivo.Text = "Cargar Archivo";
+            this.btnCargarArchivo.Text = "Listado";
             this.btnCargarArchivo.UseVisualStyleBackColor = true;
             this.btnCargarArchivo.Click += new System.EventHandler(this.btnCargarArchivo_Click);
             // 
@@ -169,10 +149,8 @@
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(2133, 1073);
             this.Controls.Add(this.btnCargarArchivo);
-            this.Controls.Add(this.btnListado);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnBaja);
-            this.Controls.Add(this.btnAlta);
             this.Controls.Add(this.dgvPedidos);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.txtNroConcesionaria);
@@ -200,10 +178,8 @@
         private System.Windows.Forms.TextBox txtNroConcesionaria;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.DataGridView dgvPedidos;
-        private System.Windows.Forms.Button btnAlta;
         private System.Windows.Forms.Button btnBaja;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnListado;
         private System.Windows.Forms.Button btnCargarArchivo;
     }
 }

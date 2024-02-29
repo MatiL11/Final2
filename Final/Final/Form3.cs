@@ -45,9 +45,7 @@ namespace Final
                 pedidos.Add(nuevoPedido);
             }
 
-            //actualizamos el datagridview
-            dgvPedidos.DataSource = null;
-            dgvPedidos.DataSource = pedidos;
+            ActualizarDGVPedidos();
          }
 
         private void btnCargarArchivo_Click(object sender, EventArgs e)
@@ -61,9 +59,7 @@ namespace Final
             //seleccionamos el pedido que queremos dar de baja
             Pedido pedido = (Pedido)dgvPedidos.CurrentRow.DataBoundItem;
             pedidos.Remove(pedido);
-            //actualizamos el datagridview
-            dgvPedidos.DataSource = null;
-            dgvPedidos.DataSource = pedidos;
+            ActualizarDGVPedidos();
         }
 
         private void btnBaja_Click(object sender, EventArgs e)
@@ -86,10 +82,7 @@ namespace Final
             //ordenamos el arraylist
             pedidos.Sort(new ComparadorElemento());
             
-
-            //actualizamos el datagridview
-            dgvPedidos.DataSource = null;
-            dgvPedidos.DataSource = pedidos;
+            ActualizarDGVPedidos();
 
             LimpiarCampos();
             
@@ -97,15 +90,52 @@ namespace Final
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            ModificarPedido();
+            ValidarCampos();
         }
 
-        //metodo para limpiar los campos
+        public void ActualizarDGVPedidos()
+        {
+            dgvPedidos.DataSource = null;
+            dgvPedidos.DataSource = pedidos;
+        }
+
         public void LimpiarCampos()
         {
             txtModelo.Text = "";
             txtNroConcesionaria.Text = "";
             txtCantidad.Text = "";
         }
+
+        //metodo para validar los campos
+        public void ValidarCampos()
+        {
+            if (txtModelo.Text == "" || txtNroConcesionaria.Text == "" || txtCantidad.Text == "")
+            {
+                MessageBox.Show("Debe completar todos los campos");
+            }
+            else
+            {
+                int modelo = Convert.ToInt32(txtModelo.Text);
+                int nroConcesionaria = Convert.ToInt32(txtNroConcesionaria.Text);
+                int cantidad = Convert.ToInt32(txtCantidad.Text);
+
+                if (modelo < 1 || modelo > 5)
+                {
+                    MessageBox.Show("El modelo debe ser un numero entero entre 1 y 5");
+                }
+                else if (nroConcesionaria != 10 && nroConcesionaria != 20 && nroConcesionaria != 30 && nroConcesionaria != 40 && nroConcesionaria != 50)
+                {
+                    MessageBox.Show("El numero de concesionaria debe ser 10, 20, 30, 40 o 50");
+                }
+                else if (cantidad < 1)
+                {
+                    MessageBox.Show("La cantidad debe ser un numero mayor a 0");
+                }
+                else
+                {
+                    ModificarPedido();
+                }
+            }
+        }   
     }
 }

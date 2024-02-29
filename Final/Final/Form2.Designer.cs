@@ -44,9 +44,10 @@
             // 
             // btnEnviarPedido
             // 
-            this.btnEnviarPedido.Location = new System.Drawing.Point(12, 324);
+            this.btnEnviarPedido.Location = new System.Drawing.Point(32, 773);
+            this.btnEnviarPedido.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnEnviarPedido.Name = "btnEnviarPedido";
-            this.btnEnviarPedido.Size = new System.Drawing.Size(105, 46);
+            this.btnEnviarPedido.Size = new System.Drawing.Size(280, 110);
             this.btnEnviarPedido.TabIndex = 0;
             this.btnEnviarPedido.Text = "Enviar Pedido";
             this.btnEnviarPedido.UseVisualStyleBackColor = true;
@@ -56,9 +57,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.label1.Location = new System.Drawing.Point(16, 95);
+            this.label1.Location = new System.Drawing.Point(43, 227);
+            this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 16);
+            this.label1.Size = new System.Drawing.Size(273, 35);
             this.label1.TabIndex = 1;
             this.label1.Text = "Numero de modelo";
             // 
@@ -66,9 +68,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.label2.Location = new System.Drawing.Point(16, 180);
+            this.label2.Location = new System.Drawing.Point(43, 429);
+            this.label2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 16);
+            this.label2.Size = new System.Drawing.Size(364, 35);
             this.label2.TabIndex = 2;
             this.label2.Text = "Numero de concesionaria";
             // 
@@ -76,38 +79,43 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.label3.Location = new System.Drawing.Point(16, 263);
+            this.label3.Location = new System.Drawing.Point(43, 627);
+            this.label3.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 16);
+            this.label3.Size = new System.Drawing.Size(238, 35);
             this.label3.TabIndex = 3;
             this.label3.Text = "Cantidad pedida";
             // 
             // txtModelo
             // 
-            this.txtModelo.Location = new System.Drawing.Point(190, 94);
+            this.txtModelo.Location = new System.Drawing.Point(507, 224);
+            this.txtModelo.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(105, 20);
+            this.txtModelo.Size = new System.Drawing.Size(273, 38);
             this.txtModelo.TabIndex = 4;
             // 
             // txtNroConcesionaria
             // 
-            this.txtNroConcesionaria.Location = new System.Drawing.Point(190, 179);
+            this.txtNroConcesionaria.Location = new System.Drawing.Point(507, 427);
+            this.txtNroConcesionaria.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtNroConcesionaria.Name = "txtNroConcesionaria";
-            this.txtNroConcesionaria.Size = new System.Drawing.Size(105, 20);
+            this.txtNroConcesionaria.Size = new System.Drawing.Size(273, 38);
             this.txtNroConcesionaria.TabIndex = 5;
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(190, 262);
+            this.txtCantidad.Location = new System.Drawing.Point(507, 625);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(105, 20);
+            this.txtCantidad.Size = new System.Drawing.Size(273, 38);
             this.txtCantidad.TabIndex = 6;
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(658, 324);
+            this.btnVolver.Location = new System.Drawing.Point(1755, 773);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(105, 46);
+            this.btnVolver.Size = new System.Drawing.Size(280, 110);
             this.btnVolver.TabIndex = 7;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -117,36 +125,40 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label4.Location = new System.Drawing.Point(94, 17);
+            this.label4.Location = new System.Drawing.Point(251, 41);
+            this.label4.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 20);
+            this.label4.Size = new System.Drawing.Size(331, 47);
             this.label4.TabIndex = 8;
             this.label4.Text = "Realizar pedidos";
             // 
             // dgvPedidoExitoso
             // 
             this.dgvPedidoExitoso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPedidoExitoso.Location = new System.Drawing.Point(368, 91);
+            this.dgvPedidoExitoso.Location = new System.Drawing.Point(981, 217);
+            this.dgvPedidoExitoso.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.dgvPedidoExitoso.Name = "dgvPedidoExitoso";
-            this.dgvPedidoExitoso.Size = new System.Drawing.Size(395, 188);
+            this.dgvPedidoExitoso.RowHeadersWidth = 102;
+            this.dgvPedidoExitoso.Size = new System.Drawing.Size(1053, 448);
             this.dgvPedidoExitoso.TabIndex = 9;
             // 
             // btnGuardarArchivo
             // 
-            this.btnGuardarArchivo.Location = new System.Drawing.Point(368, 324);
+            this.btnGuardarArchivo.Location = new System.Drawing.Point(981, 773);
+            this.btnGuardarArchivo.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnGuardarArchivo.Name = "btnGuardarArchivo";
-            this.btnGuardarArchivo.Size = new System.Drawing.Size(105, 46);
+            this.btnGuardarArchivo.Size = new System.Drawing.Size(280, 110);
             this.btnGuardarArchivo.TabIndex = 10;
-            this.btnGuardarArchivo.Text = "Guardar Archivo";
+            this.btnGuardarArchivo.Text = "Realizar Alta";
             this.btnGuardarArchivo.UseVisualStyleBackColor = true;
             this.btnGuardarArchivo.Click += new System.EventHandler(this.btnGuardarArchivo_Click);
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(775, 395);
+            this.ClientSize = new System.Drawing.Size(2067, 942);
             this.Controls.Add(this.btnGuardarArchivo);
             this.Controls.Add(this.dgvPedidoExitoso);
             this.Controls.Add(this.label4);
@@ -158,6 +170,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEnviarPedido);
+            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "Form2";
             this.Text = "Realizar Pedido";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidoExitoso)).EndInit();

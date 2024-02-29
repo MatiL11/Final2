@@ -14,12 +14,6 @@ namespace Final
         public int modelo { get; set; }
         public int nroConcesionaria { get; set; }
         public int cantidad { get; set; }
-
-        //metodo para concatenar informacion
-        public string pedidoListo(int modelo, int nroConcecionaria, int cantidad)
-        {
-            return "Modelo: " + modelo + "|" + "Concesionaria: " + nroConcesionaria + "|" + "Cantidad: " + cantidad;
-        }
     }
 
     class ComparadorElemento : IComparer

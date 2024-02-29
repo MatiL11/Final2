@@ -84,14 +84,20 @@ namespace Final
                     //ordenar el arraylist
                     pedidos.Sort(new ComparadorElemento());
 
-                    //agregar el pedido al data grid view
-                    dgvPedidoExitoso.DataSource = null;
-                    dgvPedidoExitoso.DataSource = pedidos;
+                    ActualizarDGVPedido();
+
                     LimpiarTextBox();
                     MessageBox.Show("Pedido enviado");
 
                 }
             }
+        } 
+
+        //metodo para actualizar el data grid view
+        public void ActualizarDGVPedido()
+        {
+            dgvPedidoExitoso.DataSource = null;
+            dgvPedidoExitoso.DataSource = pedidos;
         }
 
         //metodo para guardar el pedido en el archivo de texto
@@ -104,7 +110,7 @@ namespace Final
 
             foreach (Pedido pedido in pedidos)
             {
-                StreamWriter agregar = File.AppendText("Pedidos.txt"); 
+                StreamWriter agregar = File.AppendText("Pedidos.txt");
                 agregar.WriteLine(pedido.modelo + "|" + pedido.nroConcesionaria + "|" + pedido.cantidad);
                 agregar.Close();
             }
@@ -126,5 +132,5 @@ namespace Final
         }
 
         //Terminado
-    }   
+    }
 }
