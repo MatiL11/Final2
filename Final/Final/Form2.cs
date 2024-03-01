@@ -103,8 +103,7 @@ namespace Final
         //metodo para guardar el pedido en el archivo de texto
         public void GuardarArchivo()
         {
-            //intanciar la clase pedido
-            Pedido nuevoPedido = new Pedido();
+            //creo el archivo de texto si no existe
             TextWriter escribir = new StreamWriter("Pedidos.txt", true);
             escribir.Close();
 
