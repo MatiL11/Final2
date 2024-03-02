@@ -1,1 +1,3 @@
-3|asda|19
+1|Piter|26
+2|Kika|28
+2|Tincho|25
