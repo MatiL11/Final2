@@ -26,3 +26,4 @@ C:\Users\matia\Desktop\Final\Final2\Final\Final\obj\Debug\Final.csproj.GenerateR
 C:\Users\matia\Desktop\Final\Final2\Final\Final\obj\Debug\Final.csproj.CoreCompileInputs.cache
 C:\Users\matia\Desktop\Final\Final2\Final\Final\obj\Debug\Final.exe
 C:\Users\matia\Desktop\Final\Final2\Final\Final\obj\Debug\Final.pdb
+C:\Users\matia\Desktop\Final\Final2\Final\Final\obj\Debug\Final.Form6.resources
