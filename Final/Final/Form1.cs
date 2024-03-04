@@ -49,5 +49,12 @@ namespace Final
             form5.Show();
             Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form6 form6 = new Form6();
+            form6.Show();
+            Hide();
+        }
     }
 }
