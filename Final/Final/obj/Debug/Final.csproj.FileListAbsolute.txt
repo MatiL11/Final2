@@ -27,3 +27,4 @@ C:\Users\matia\Desktop\Final\Final2\Final\Final\obj\Debug\Final.csproj.CoreCompi
 C:\Users\matia\Desktop\Final\Final2\Final\Final\obj\Debug\Final.exe
 C:\Users\matia\Desktop\Final\Final2\Final\Final\obj\Debug\Final.pdb
 C:\Users\matia\Desktop\Final\Final2\Final\Final\obj\Debug\Final.Form6.resources
+D:\Facultad\Programacion\Final2Cuatrimestre\Final\Final\obj\Debug\Final.Form6.resources
