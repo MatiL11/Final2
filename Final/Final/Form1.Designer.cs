@@ -34,7 +34,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnStockPiezas = new System.Windows.Forms.Button();
             this.btnStockModelos = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPanelPrincipal = new System.Windows.Forms.Button();
+            this.btnComposiciones = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnRealizarPedido
@@ -103,15 +104,24 @@
             this.btnStockModelos.UseVisualStyleBackColor = true;
             this.btnStockModelos.Click += new System.EventHandler(this.btnStockModelos_Click);
             // 
-            // button1
+            // btnPanelPrincipal
             // 
-            this.button1.Location = new System.Drawing.Point(506, 171);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(238, 92);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnPanelPrincipal.Location = new System.Drawing.Point(497, 134);
+            this.btnPanelPrincipal.Name = "btnPanelPrincipal";
+            this.btnPanelPrincipal.Size = new System.Drawing.Size(238, 92);
+            this.btnPanelPrincipal.TabIndex = 6;
+            this.btnPanelPrincipal.Text = "Panel Principal";
+            this.btnPanelPrincipal.UseVisualStyleBackColor = true;
+            this.btnPanelPrincipal.Click += new System.EventHandler(this.btnPanelPrincipal_Click);
+            // 
+            // btnComposiciones
+            // 
+            this.btnComposiciones.Location = new System.Drawing.Point(497, 241);
+            this.btnComposiciones.Name = "btnComposiciones";
+            this.btnComposiciones.Size = new System.Drawing.Size(238, 92);
+            this.btnComposiciones.TabIndex = 7;
+            this.btnComposiciones.Text = "Composiciones";
+            this.btnComposiciones.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -119,7 +129,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(779, 715);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnComposiciones);
+            this.Controls.Add(this.btnPanelPrincipal);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnStockModelos);
             this.Controls.Add(this.btnRealizarPedido);
@@ -143,7 +154,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnStockPiezas;
         private System.Windows.Forms.Button btnStockModelos;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPanelPrincipal;
+        private System.Windows.Forms.Button btnComposiciones;
     }
 }
 

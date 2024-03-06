@@ -14,15 +14,16 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Final
 {
-    public partial class Form6 : Form
+    public partial class PanelPrincipal : Form
     {
-        public Form6()
+        public PanelPrincipal()
         {
             InitializeComponent();
         }
 
         ArrayList pedidos = new ArrayList();
         ArrayList modelos = new ArrayList();
+        ArrayList piezas = new ArrayList();
 
         public void CargarArchivo(string boton)
         {
@@ -35,6 +36,7 @@ namespace Final
                 string[] datos = linea.Split('|');
                 Pedido nuevoPedido = new Pedido();
                 Modelos nuevoModelo = new Modelos();
+                Piezas nuevaPieza = new Piezas();
                 if (boton == "Pedidos.txt")
                 {
                     nuevoPedido.modelo = Convert.ToInt32(datos[0]);
@@ -42,12 +44,19 @@ namespace Final
                     nuevoPedido.cantidad = Convert.ToInt32(datos[2]);
                     pedidos.Add(nuevoPedido);
                 }
-                else if (boton == "StockTerminado.txt" || boton == "StockPiezas.txt")
+                else if (boton == "StockTerminado.txt")
                 {
                     nuevoModelo.modelo = Convert.ToInt32(datos[0]);
                     nuevoModelo.descripcion = datos[1];
                     nuevoModelo.cantidad = Convert.ToInt32(datos[2]);
                     modelos.Add(nuevoModelo);
+                }
+                else
+                {
+                    nuevaPieza.modelo = Convert.ToInt32(datos[0]);
+                    nuevaPieza.descripcion = datos[1];
+                    nuevaPieza.cantidad = Convert.ToInt32(datos[2]);
+                    piezas.Add(nuevaPieza);
                 }
             }
             ActualizarDGVDatos(boton);
@@ -60,6 +69,11 @@ namespace Final
             {
                 dgvDatos.DataSource = null;
                 dgvDatos.DataSource = pedidos;
+            }
+            else if (boton == "StockPiezas.txt")
+            {
+                dgvDatos.DataSource = null;
+                dgvDatos.DataSource = piezas;
             }
             else
             {
@@ -102,7 +116,7 @@ namespace Final
                 return;
             }
 
-            if (archivo == "StockTerminado.txt" || archivo == "StockPiezas.txt")
+            if (archivo == "StockTerminado.txt")
             {
                 string descripcion = txtDescripcion.Text;
 
@@ -113,6 +127,35 @@ namespace Final
                 nuevoModelo.cantidad = cantidad;
 
                 modelos.Add(nuevoModelo);
+            }
+            else if (archivo == "StockPiezas.txt")
+            {
+                //instanciar la clase pieza
+                Piezas nuevaPieza = new Piezas();
+                nuevaPieza.modelo = modelo;
+                if (nuevaPieza.modelo == 1)
+                {
+                    nuevaPieza.descripcion = "Carroceria";
+                }
+                else if (nuevaPieza.modelo == 2)
+                {
+                    nuevaPieza.descripcion = "Motor";
+                }
+                else if (nuevaPieza.modelo == 3)
+                {
+                    nuevaPieza.descripcion = "Caja de Cambios";
+                }
+                else if (nuevaPieza.modelo == 4)
+                {
+                    nuevaPieza.descripcion = "Puertas";
+                }
+                else
+                {
+                    nuevaPieza.descripcion = "Ruedas";
+                }
+                nuevaPieza.cantidad = cantidad;
+
+                piezas.Add(nuevaPieza);
             }
             else
             {
@@ -170,6 +213,15 @@ namespace Final
                     escribir.Close();
                 }
             }
+            else if (archivo == "StockPiezas.txt")
+            {
+                foreach (Piezas pieza in piezas)
+                {
+                    escribir = new StreamWriter(archivo, true);
+                    escribir.WriteLine(pieza.modelo + "|" + pieza.descripcion + "|" + pieza.cantidad);
+                    escribir.Close();
+                }
+            }
             else
             {
                 foreach (Modelos modelo in modelos)
@@ -181,6 +233,74 @@ namespace Final
             }
 
             MessageBox.Show("Archivo guardado");
+        }
+
+        public void ModificarPedido(string archivo)
+        {
+
+            if (!ValidarCampos())
+            {
+                return;
+            }
+            if ( archivo == "Pedidos.txt")
+            {
+                //seleccionamos el pedido que queremos modificar
+                Pedido pedido = (Pedido)dgvDatos.CurrentRow.DataBoundItem;
+
+                //modificamos el pedido
+                pedido.modelo = Convert.ToInt32(txtModelo.Text);
+                pedido.nroConcesionaria = Convert.ToInt32(txtNroConcesionaria.Text);
+                pedido.cantidad = Convert.ToInt32(txtCantidad.Text);
+
+
+                //ordenamos el arraylist
+                pedidos.Sort(new ComparadorElemento());
+            }
+            else if (archivo == "StockTerminado.txt")
+            {
+                //seleccionamos el pedido que queremos modificar
+                Modelos modelo = (Modelos)dgvDatos.CurrentRow.DataBoundItem;
+
+                //modificamos el pedido
+                modelo.modelo = Convert.ToInt32(txtModelo.Text);
+                modelo.descripcion = txtDescripcion.Text;
+                modelo.cantidad = Convert.ToInt32(txtCantidad.Text);
+            }
+            else
+            {
+                Piezas pieza = (Piezas)dgvDatos.CurrentRow.DataBoundItem;
+
+                pieza.modelo = Convert.ToInt32(txtModelo.Text);
+                pieza.descripcion = txtDescripcion.Text;
+                pieza.cantidad = Convert.ToInt32(txtCantidad.Text);
+            }
+
+            ActualizarDGVDatos(archivo);
+
+            LimpiarCampos();
+        }
+
+        public void BajaPedido(string archivo)
+        {
+            if (archivo == "Pedidos.txt")
+            {
+                //seleccionamos el pedido que queremos dar de baja
+                Pedido pedido = (Pedido)dgvDatos.CurrentRow.DataBoundItem;
+                pedidos.Remove(pedido);
+            }
+            else if (archivo == "StockTerminado.txt")
+            {
+                //seleccionamos el pedido que queremos dar de baja
+                Modelos modelo = (Modelos)dgvDatos.CurrentRow.DataBoundItem;
+                modelos.Remove(modelo);
+            }
+            else
+            {
+                //seleccionamos el pedido que queremos dar de baja
+                Piezas pieza = (Piezas)dgvDatos.CurrentRow.DataBoundItem;
+                piezas.Remove(pieza);
+            }
+            ActualizarDGVDatos(archivo);
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
@@ -240,8 +360,45 @@ namespace Final
 
         private void btnAltaPedidos_Click(object sender, EventArgs e)
         {
-            LimpiarArchivo("Pedidos.txt");
-            GuardarArchivo("Pedidos.txt");
+            string archivo = "Pedidos.txt";
+            LimpiarArchivo(archivo);
+            GuardarArchivo(archivo);
+        }
+
+        private void btnModificarPedidos_Click(object sender, EventArgs e)
+        {
+            string archivo = "Pedidos.txt";
+            ModificarPedido(archivo);
+        }
+
+        private void btnModificarModelos_Click(object sender, EventArgs e)
+        {
+            string archivo = "StockTerminado.txt";
+            ModificarPedido(archivo);
+        }
+
+        private void btnModificarPiezas_Click(object sender, EventArgs e)
+        {
+            string archivo = "StockPiezas.txt";
+            ModificarPedido(archivo);
+        }
+
+        private void btnBajaPedidos_Click(object sender, EventArgs e)
+        {
+            string archivo = "Pedidos.txt"; 
+            BajaPedido(archivo);
+        }
+
+        private void btnBajaModelos_Click(object sender, EventArgs e)
+        {
+            string archivo = "StockTerminado.txt";
+            BajaPedido(archivo);
+        }
+
+        private void btnBajaPiezas_Click(object sender, EventArgs e)
+        {
+            string archivo = "StockPiezas.txt";
+            BajaPedido(archivo);
         }
     }
 }

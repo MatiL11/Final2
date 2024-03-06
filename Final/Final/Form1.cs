@@ -50,10 +50,10 @@ namespace Final
             Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnPanelPrincipal_Click(object sender, EventArgs e)
         {
-            Form6 form6 = new Form6();
-            form6.Show();
+            PanelPrincipal formPrincipal = new PanelPrincipal();
+            formPrincipal.Show();
             Hide();
         }
     }
