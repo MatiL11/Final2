@@ -40,7 +40,7 @@
             // 
             // btnRealizarPedido
             // 
-            this.btnRealizarPedido.Location = new System.Drawing.Point(117, 131);
+            this.btnRealizarPedido.Location = new System.Drawing.Point(832, 410);
             this.btnRealizarPedido.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnRealizarPedido.Name = "btnRealizarPedido";
             this.btnRealizarPedido.Size = new System.Drawing.Size(272, 95);
@@ -51,7 +51,7 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(117, 570);
+            this.btnCerrar.Location = new System.Drawing.Point(832, 849);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(272, 95);
@@ -62,7 +62,7 @@
             // 
             // btnPedidos
             // 
-            this.btnPedidos.Location = new System.Drawing.Point(117, 460);
+            this.btnPedidos.Location = new System.Drawing.Point(832, 739);
             this.btnPedidos.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnPedidos.Name = "btnPedidos";
             this.btnPedidos.Size = new System.Drawing.Size(272, 95);
@@ -84,7 +84,7 @@
             // 
             // btnStockPiezas
             // 
-            this.btnStockPiezas.Location = new System.Drawing.Point(117, 351);
+            this.btnStockPiezas.Location = new System.Drawing.Point(832, 630);
             this.btnStockPiezas.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnStockPiezas.Name = "btnStockPiezas";
             this.btnStockPiezas.Size = new System.Drawing.Size(272, 95);
@@ -95,7 +95,7 @@
             // 
             // btnStockModelos
             // 
-            this.btnStockModelos.Location = new System.Drawing.Point(117, 241);
+            this.btnStockModelos.Location = new System.Drawing.Point(832, 520);
             this.btnStockModelos.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnStockModelos.Name = "btnStockModelos";
             this.btnStockModelos.Size = new System.Drawing.Size(272, 95);
@@ -106,7 +106,7 @@
             // 
             // btnPanelPrincipal
             // 
-            this.btnPanelPrincipal.Location = new System.Drawing.Point(497, 134);
+            this.btnPanelPrincipal.Location = new System.Drawing.Point(117, 127);
             this.btnPanelPrincipal.Name = "btnPanelPrincipal";
             this.btnPanelPrincipal.Size = new System.Drawing.Size(238, 92);
             this.btnPanelPrincipal.TabIndex = 6;
@@ -116,19 +116,20 @@
             // 
             // btnComposiciones
             // 
-            this.btnComposiciones.Location = new System.Drawing.Point(497, 241);
+            this.btnComposiciones.Location = new System.Drawing.Point(117, 234);
             this.btnComposiciones.Name = "btnComposiciones";
             this.btnComposiciones.Size = new System.Drawing.Size(238, 92);
             this.btnComposiciones.TabIndex = 7;
             this.btnComposiciones.Text = "Composiciones";
             this.btnComposiciones.UseVisualStyleBackColor = true;
+            this.btnComposiciones.Click += new System.EventHandler(this.btnComposiciones_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(779, 715);
+            this.ClientSize = new System.Drawing.Size(492, 456);
             this.Controls.Add(this.btnComposiciones);
             this.Controls.Add(this.btnPanelPrincipal);
             this.Controls.Add(this.label1);

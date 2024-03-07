@@ -100,6 +100,7 @@ namespace Final
             return true;
         }
 
+
         public void EnviarDatos(string archivo)
         {
             if (!ValidarCampos())
@@ -399,6 +400,13 @@ namespace Final
         {
             string archivo = "StockPiezas.txt";
             BajaPedido(archivo);
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
         }
     }
 }

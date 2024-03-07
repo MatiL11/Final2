@@ -55,6 +55,7 @@
             this.btnBajaPedidos = new System.Windows.Forms.Button();
             this.btnBajaModelos = new System.Windows.Forms.Button();
             this.btnBajaPiezas = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -332,11 +333,23 @@
             this.btnBajaPiezas.UseVisualStyleBackColor = true;
             this.btnBajaPiezas.Click += new System.EventHandler(this.btnBajaPiezas_Click);
             // 
-            // Opciones
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(1657, 796);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(192, 86);
+            this.btnVolver.TabIndex = 28;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // PanelPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1776, 906);
+            this.ClientSize = new System.Drawing.Size(1861, 906);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnBajaPiezas);
             this.Controls.Add(this.btnBajaModelos);
             this.Controls.Add(this.btnBajaPedidos);
@@ -365,7 +378,7 @@
             this.Controls.Add(this.btnModelos);
             this.Controls.Add(this.btnPedidos);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Opciones";
+            this.Name = "PanelPrincipal";
             this.Text = "Panel Principal";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.ResumeLayout(false);
@@ -402,5 +415,6 @@
         private System.Windows.Forms.Button btnBajaPedidos;
         private System.Windows.Forms.Button btnBajaModelos;
         private System.Windows.Forms.Button btnBajaPiezas;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

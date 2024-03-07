@@ -56,5 +56,12 @@ namespace Final
             formPrincipal.Show();
             Hide();
         }
+
+        private void btnComposiciones_Click(object sender, EventArgs e)
+        {
+            PanelComposiciones formComposiciones = new PanelComposiciones();
+            formComposiciones.Show();
+            Hide();
+        }
     }
 }
