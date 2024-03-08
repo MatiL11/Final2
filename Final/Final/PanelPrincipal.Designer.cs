@@ -205,6 +205,7 @@
             this.btnAltaModelos.TabIndex = 14;
             this.btnAltaModelos.Text = "Alta";
             this.btnAltaModelos.UseVisualStyleBackColor = true;
+            this.btnAltaModelos.Click += new System.EventHandler(this.btnAltaModelos_Click);
             // 
             // btnAltaPiezas
             // 
@@ -215,6 +216,7 @@
             this.btnAltaPiezas.TabIndex = 15;
             this.btnAltaPiezas.Text = "Alta";
             this.btnAltaPiezas.UseVisualStyleBackColor = true;
+            this.btnAltaPiezas.Click += new System.EventHandler(this.btnAltaPiezas_Click);
             // 
             // btnEnviarPedido
             // 
