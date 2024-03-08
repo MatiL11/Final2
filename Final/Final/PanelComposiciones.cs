@@ -20,6 +20,7 @@ namespace Final
         }
 
         ArrayList compos = new ArrayList();
+        ArrayList vehiculos = new ArrayList();
 
         private bool ValidarCampos()
         {
@@ -54,10 +55,31 @@ namespace Final
         {
             LimpiarArchivo();
             TextWriter escribir = new StreamWriter("ComposicionVehiculo.txt", true);
+
+            int contador = 0;
+            string linea = "";
+
             foreach (Composiciones composicion in compos)
             {
-                escribir.WriteLine(composicion.modelo + "," + composicion.pieza + "," + composicion.cantidad);
+                if (contador < 4) // Agregar 4 composiciones en la misma línea
+                {
+                    linea += composicion.modelo + "," + composicion.pieza + "," + composicion.cantidad + "-";
+                    contador++;
+                }
+                else // Cuando se alcanzan 5 composiciones, escribir en el archivo y reiniciar contador y línea
+                {
+                    linea += composicion.modelo + "," + composicion.pieza + "," + composicion.cantidad;
+                    escribir.WriteLine(linea);
+                    contador = 0;
+                    linea = "";
+                }
             }
+
+            if (!string.IsNullOrEmpty(linea)) // Escribir la última línea si hay composiciones pendientes
+            {
+                escribir.WriteLine(linea);
+            }
+
             escribir.Close();
             MessageBox.Show("Archivo guardado correctamente");
         }
@@ -70,17 +92,28 @@ namespace Final
                 string linea = "";
                 while ((linea = leer.ReadLine()) != null)
                 {
-                    string[] datos = linea.Split(',');
-                    Composiciones composicion = new Composiciones();
-                    composicion.modelo = Convert.ToInt32(datos[0]);
-                    composicion.pieza = Convert.ToInt32(datos[1]);
-                    composicion.cantidad = Convert.ToInt32(datos[2]);
-                    compos.Add(composicion);
+                    string[] composiciones = linea.Split('-');
+
+                    foreach (string composicionData in composiciones)
+                    {
+                        string[] datos = composicionData.Split(',');
+
+                        if (datos.Length == 3) // Verificar si hay suficientes datos para crear una composición completa
+                        {
+                            Composiciones composicion = new Composiciones();
+                            composicion.modelo = Convert.ToInt32(datos[0]);
+                            composicion.pieza = Convert.ToInt32(datos[1]);
+                            composicion.cantidad = Convert.ToInt32(datos[2]);
+                            compos.Add(composicion);
+                        }
+                    }
                 }
                 leer.Close();
                 ActualizarDGVDatos();
             }
         }
+
+
 
         public void BajaPedido()
         {
